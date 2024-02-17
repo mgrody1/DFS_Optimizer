@@ -14,7 +14,7 @@ def get_engine():
     engine = create_engine(connection_str, echo=True)
     return engine
 
-def query_to_df(sql_query, engine):
+def query_to_df(sql_query):
     """
     Execute an SQL query and return the results as a Pandas DataFrame.
 
@@ -25,7 +25,7 @@ def query_to_df(sql_query, engine):
     Returns:
     - A Pandas DataFrame containing the results of the SQL query.
     """
-    
+    engine = get_engine()
     # Use pandas to execute the query and return the results as a DataFrame
     df = pd.read_sql_query(sql_query, con=engine)
     
