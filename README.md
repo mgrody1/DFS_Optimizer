@@ -20,6 +20,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. **Set Up the Virtual Environment and Install Dependencies**
 
     ```
+    pip install pipenv
     pipenv install
     ```
 
@@ -56,12 +57,6 @@ These instructions will get you a copy of the project up and running on your loc
 ## Versioning
 
 We use Git for version control. For the versions available, see the [tags on this repository](https://github.com/yourusername/dfs_optimizer/tags).
-
-## Authors
-
-- **Your Name** - *Initial work* - [YourUsername](https://github.com/yourusername)
-
-See also the list of [contributors](https://github.com/yourusername/dfs_optimizer/contributors) who participated in this project.
 
 ## License
 
