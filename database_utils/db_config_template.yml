@@ -1,0 +1,10 @@
+database:
+  dialect: 'mysql'
+  driver: 'pymysql'
+  username: 'your_username'
+  password: 'your_password'
+  host: 'localhost'
+  port: 3306
+  database: 'your_database_name'
+
+#Copy this and name actual file db_config.yml
