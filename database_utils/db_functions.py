@@ -1,15 +1,8 @@
-import yaml
 from sqlalchemy import create_engine
 import pandas as pd
-
-def load_database_config():
-    with open('db_config.yml', 'r') as file:
-        config = yaml.safe_load(file)
-    db = config['database']
-    return db
+from database_utils import db
 
 def get_engine():
-    db = load_database_config()
     connection_str = f"{db['dialect']}+{db['driver']}://{db['username']}:{db['password']}@{db['host']}:{db['port']}/{db['database']}"
     engine = create_engine(connection_str, echo=True)
     return engine
