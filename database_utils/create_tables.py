@@ -27,6 +27,11 @@ def create_tables(engine):
         date DATE NOT NULL,
         home_team_id INT,
         away_team_id INT,
+        home_score INT,
+        away_score INT,
+        innings_played FLOAT,
+        weather VARCHAR(255),
+        game_start_time TIME,
         FOREIGN KEY (home_team_id) REFERENCES Teams(team_id),
         FOREIGN KEY (away_team_id) REFERENCES Teams(team_id)
     );
@@ -41,6 +46,7 @@ def create_tables(engine):
         projected_points FLOAT,
         actual_points FLOAT,
         dfs_salary FLOAT,
+        batting_order INT,
         FOREIGN KEY (player_id) REFERENCES Players(player_id),
         FOREIGN KEY (game_id) REFERENCES Games(game_id)
     );
