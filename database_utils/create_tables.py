@@ -15,7 +15,9 @@ def create_tables(engine):
     teams_schema = """
     CREATE TABLE IF NOT EXISTS Teams (
         team_id INT AUTO_INCREMENT PRIMARY KEY,
-        team_name VARCHAR(255) NOT NULL
+        team_name VARCHAR(255) NOT NULL,
+        city VARCHAR(255), 
+        stadium_location DOUBLE
     );
     """
 
